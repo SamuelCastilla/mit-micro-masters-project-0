@@ -8,7 +8,7 @@ def randomization(n):
       A - a randomly-generated nx1 Numpy array.
     """
     #Your code here
-    A = np.random.randint(n)
+    A = np.random.rand(n, 1)
     return A
     raise NotImplementedError
 
@@ -90,7 +90,8 @@ def vector_function(x, y):
     Make sure vector_function can deal with vector input x,y 
     """
     #Your code here
-    return np.vectorize(scalar_function(x,y))
+    vectorized_func = np.vectorize(scalar_function)
+    return vectorized_func(x,y)
     raise NotImplementedError
 
 
